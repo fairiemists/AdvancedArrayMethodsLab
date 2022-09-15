@@ -170,26 +170,38 @@ let dishes = [
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
 
-function problemFour(callback){
+// function problemFour(callback){
+//   let results = dishes.filter(function(el){
+//     if (callback(el.servings)){
+//       return true;
+//     }
+//   })
+//   return results;
+// }
+
+// function findEven(num){
+//   if (num % 2 == 0){
+//     return true;
+//   }
+// }
+
+// let problemFour_result = problemFour(findEven)
+// console.log(problemFour_result)
+
+//5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
+//Filter
+
+function problemFive(){
   let results = dishes.filter(function(el){
-    if (callback(el.servings)){
+    if (el.ingredients.includes ("tomato") && el.ingredients.includes ("cheese")){
       return true;
     }
   })
   return results;
 }
 
-function findEven(num){
-  if (num % 2 == 0){
-    return true;
-  }
-}
-
-let problemFour_result = problemFour(findEven)
-console.log(problemFour_result)
-
-//5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
-//Filter
+let problemFive_result = problemFive()
+console.log(problemFive_result)
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
