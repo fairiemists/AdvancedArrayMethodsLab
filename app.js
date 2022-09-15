@@ -155,20 +155,38 @@ let dishes = [
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
 
-function problemThree(){
+// function problemThree(){
+//   let results = dishes.filter(function(el){
+//     if (el.id === el.servings){
+//       return true;
+//     }
+//   })
+//   return results;
+// }
+
+// let problemThree_result = problemThree()
+// console.log(problemThree_result)
+
+//4. Create a function that will return only dishes whose serving count is even.
+//Filter
+
+function problemFour(callback){
   let results = dishes.filter(function(el){
-    if (el.id === el.servings){
+    if (callback(el.servings)){
       return true;
     }
   })
   return results;
 }
 
-let problemThree_result = problemThree()
-console.log(problemThree_result)
+function findEven(num){
+  if (num % 2 == 0){
+    return true;
+  }
+}
 
-//4. Create a function that will return only dishes whose serving count is even.
-//Filter
+let problemFour_result = problemFour(findEven)
+console.log(problemFour_result)
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
