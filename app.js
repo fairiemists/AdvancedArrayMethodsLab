@@ -191,26 +191,46 @@ let dishes = [
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
 
-function problemFive(){
-  let results = dishes.filter(function(el){
-    if (el.ingredients.includes ("tomato") && el.ingredients.includes ("cheese")){
-      return true;
-    }
+// function problemFive(){
+//   let results = dishes.filter(function(el){
+//     if (el.ingredients.includes ("tomato") && el.ingredients.includes ("cheese")){
+//       return true;
+//     }
+//   })
+//   return results;
+// }
+
+// let problemFive_result = problemFive()
+// console.log(problemFive_result)
+
+//6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
+//Map
+
+function problemSix(){
+  let results = dishes.map(function(el){
+    return `${el.cuisine}`
   })
   return results;
 }
 
-let problemFive_result = problemFive()
-console.log(problemFive_result)
+let problemSix_result = problemSix()
+console.log(problemSix_result)
 
-//6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
-//Map
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
+
+function problemSeven(){
+  let results = dishes.map(function(el){
+    return `${el.cuisine} ${el.name}`
+  })
+  return results;
+}
+
+console.log(problemSeven())
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
